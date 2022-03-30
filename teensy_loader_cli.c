@@ -191,7 +191,7 @@ int main(int argc, char **argv)
 		} else {
 			die("Unknown code/block size\n");
 		}
-		r = teensy_write(buf, write_size, block_count <= 4 ? 45.0 : 0.5);
+		r = teensy_write(buf, write_size, block_count <= 4 ? 45.0 : 2.0);
 		if (!r) die("error writing to Teensy\n");
 		block_count = block_count + 1;
 	}
